@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Clase 38 - DOM</title>
+</head>
+
+<body>
+
+  <h1>38 - JS - Ejercicios en clase - DOM</h1>
+
+  <h2>Please add friends 💕</h2>
+
+  <input type="text" id="friend" placeholder="add friend">
+
+  <button onclick="addFriend()">Add friend</button>
+
+  <ul id="myFriends">
+
+  </ul>
+
+  <script>
+
+    const addFriend = () => {
+
+      let newLi = document.createElement("li");
+
+      let addNewLi = document.getElementById("myFriends").appendChild(newLi)
+
+      let input = document.getElementById("friend").value
+
+      newLi.innerText = input;
+
+      document.getElementById("friend").value = ""
+
+    }
+  </script>
+
+</body>
+
+</html>
