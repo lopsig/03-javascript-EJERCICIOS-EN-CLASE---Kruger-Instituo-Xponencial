@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-En Clase 26 - Funciones</title>
+</head>
+
+<body>
+  <h1>26 - JS - Ejercicios en clase - Funciones</h1>
+  <h3>Número Menor</h3>
+
+
+  <input type="text" id="n1" placeholder="Ingresa el primer número" autocomplete="off" required><br>
+  <input type="text" id="n2" placeholder="Ingresa el segundo número" required autocomplete="off"><br>
+  <input type="text" id="n3" placeholder="Ingresa el tercer número" required autocomplete="off"><br>
+
+
+  <button onclick='minBetween3numbers()'>Find Min</button>
+
+
+
+  <p id="min"></p>
+
+
+
+  <script>
+
+    function minBetween3numbers() {
+      let n1 = parseInt(document.getElementById("n1").value)
+      let n2 = parseInt(document.getElementById("n2").value)
+      let n3 = parseInt(document.getElementById("n3").value)
+      let minNumber = Math.min(n1, n2, n3)
+      console.log(Math.min(n1, n2, n3))
+
+      document.getElementById("min").innerHTML = `${minNumber} es el número mayor`
+    }
+
+  </script>
+
+
+</body>
+
+</html>
