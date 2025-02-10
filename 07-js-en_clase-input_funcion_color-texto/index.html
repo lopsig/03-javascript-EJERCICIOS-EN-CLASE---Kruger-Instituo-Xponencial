@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - En Clases 7</title>
+  <style>
+    #myDiv {
+      width: 200px;
+      height: 200px;
+      border: 1px solid green;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>07 - JS - Ejercicios en clases</h1>
+  <h3>Elige un color para el fondo</h3>
+  <input type="color" id="color_fondo">
+  <br>
+  <button onclick="selectBackColor()">Pintar Fondo</button>
+  <br><br>
+
+  <h3>Elige un color para el texto</h3>
+  <input type="color" id="color_texto">
+  <br> <button onclick="TextColor()">Pintar Texto</button>
+
+  <div id="myDiv">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, nobis. Minima harum blanditiis consequatur in
+      delectus sit labore aliquam, porro quis distinctio saepe placeat reprehenderit tenetur magnam consequuntur optio
+      ducimus.
+    </p>
+  </div>
+
+
+  <script>
+    function selectBackColor() {
+      let color_fondo = document.getElementById("color_fondo").value;
+      document.getElementById("myDiv").style.backgroundColor = color_fondo;
+    }
+
+    function TextColor() {
+      let color_texto = document.getElementById("color_texto").value;
+      document.getElementById("myDiv").style.color = color_texto;
+    }
+  </script>
+
+</body>
+
+</html>

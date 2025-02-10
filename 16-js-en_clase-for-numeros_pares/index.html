@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-En Clase 16 - For</title>
+</head>
+
+<body>
+  <h1>16 - JS - Ejercicios en clase - For</h1>
+
+  <h3>Cantidad de numeros pares</h3>
+
+
+
+  <input type="text" id="n1" placeholder="Ingresa el primer número: " autocomplete="off" required><br>
+  <input type="text" id="n2" placeholder="Ingresa el segundo número: " required autocomplete="off"><br>
+  <input type="text" id="n3" placeholder="Ingresa el tercer número: " required autocomplete="off"><br>
+  <input type="text" id="n4" placeholder="Ingresa el cuarto número: " required autocomplete="off"><br>
+
+
+  <button onclick="verificar()">Count Even</button>
+
+  <p id="details"></p>
+
+
+  <script>
+    const verificar = () => {
+      let n1 = parseInt(document.getElementById("n1").value);
+      let n2 = parseInt(document.getElementById("n2").value);
+      let n3 = parseInt(document.getElementById("n3").value);
+      let n4 = parseInt(document.getElementById("n4").value);
+
+      let cantidad = 0;
+      for (let i = 0; i < 4; i++) {
+        let valor = eval("n" + (i + 1))
+        console.log(valor)
+        if (valor % 2 == 0) {
+          console.log((valor = `${eval("n" + (i + 1))}`));
+          console.log(cantidad++)
+
+        }
+      }
+      console.log(cantidad);
+      document.getElementById("details").innerText = `Existe ${cantidad} números pares`
+    };
+
+  </script>
+
+
+</body>
+
+</html>

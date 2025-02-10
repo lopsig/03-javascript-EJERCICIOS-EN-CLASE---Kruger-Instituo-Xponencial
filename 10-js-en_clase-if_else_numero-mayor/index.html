@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - En Clase 10 - If Else</title>
+</head>
+
+<body>
+  <h1>10 - JS - Ejercicios en clase - If Else</h1>
+
+  <input type="text" id="n1" placeholder="Ingresa un número" required autocomplete="off">
+  <br>
+  <input type="text" id="n2" placeholder="Ingresa otro número" required autocomplete="off">
+  <br>
+  <button onclick="numeroMayor()">Haz Click</button>
+
+
+
+  <script>
+    const numeroMayor = () => {
+      let n1 = parseInt(document.getElementById("n1").value);
+      let n2 = parseInt(document.getElementById("n2").value);
+
+      if (n1 > n2) {
+        window.alert(`El número ${n1} es el mayor`)
+      } else {
+        alert(`El número ${n2} es el mayor`)
+      }
+    }
+  </script>
+
+</body>
+
+</html>

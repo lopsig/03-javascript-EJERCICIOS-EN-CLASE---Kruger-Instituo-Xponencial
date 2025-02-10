@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - En Clases 3</title>
+</head>
+
+<body>
+  <h1>03 - JS - Ejercicios en clases -Input</h1>
+  <h3></h3>
+
+  <button onclick="enlarge()">Click me</button>
+  <button onclick="reset()">Reset</button>
+
+  <p id="details"></p>
+
+
+  <script>
+    const details = document.getElementById("details");
+    details.style.width = "10px";
+    details.style.height = "70px";
+
+    const enlarge = () => {
+      const anchoActual = parseInt(window.getComputedStyle(details).width);
+
+      const nuevoAncho = anchoActual + 10;
+      details.style.width = nuevoAncho + "px";
+
+    };
+
+    const reset = () => {
+      const details = document.getElementById("details");
+      details.style.width = "10px";
+      details.style.backgroundColor = "yellow";
+    };
+
+  </script>
+
+
+
+
+
+
+</body>
+
+</html>

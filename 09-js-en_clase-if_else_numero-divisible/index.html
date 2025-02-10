@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - En Clases 9</title>
+</head>
+
+<body>
+  <h1>09 - JS - Ejercicios en casa - If Else</h1>
+
+  <form>
+    <input type="text" id="n1" placeholder="Ingresa un número" required autocomplete="off">
+    <br>
+    <button onclick="verificar()">Verificar</button>
+  </form>
+
+  <!-- <button onclick="verificar()">Verificar</button> -->
+
+  <script>
+    const verificar = () => {
+      let n1 = parseInt(document.getElementById("n1").value);
+
+      if (n1 % 2 == 0) {
+        alert(`El número ${n1} es divisible para 2`)
+      } else {
+        alert(`El número ${n1} NO es divisible para 2`)
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

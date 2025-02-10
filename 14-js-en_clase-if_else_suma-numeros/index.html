@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-En Clase 14 - If Else</title>
+</head>
+
+<body>
+  <h1>14 - JS - Ejercicios en Clase - If Else</h1>
+
+
+  <button onclick="suma()">Click me</button>
+
+
+  <p id="details"></p>
+
+
+  <script>
+    const suma = () => {
+      let n1 = parseInt(prompt("Ingresa el primer número: "));
+
+      let n2 = parseInt(prompt("Ingresa el segundo número: "));
+
+      let suma = n1 + n2;
+      console.log(typeof suma);
+      console.log(suma);
+
+      if (suma > 100) {
+        const details = document.getElementById("details");
+        details.innerHTML = `La suma de los número es ${suma}`;
+        details.style.color = "blue";
+      } else {
+        details.innerHTML = `La suma de los número es ${suma}`;
+        details.style.color = "red";
+      }
+    };
+
+  </script>
+
+
+</body>
+
+</html>

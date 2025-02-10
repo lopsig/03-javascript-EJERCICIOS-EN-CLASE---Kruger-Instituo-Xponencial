@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-En Clase 29 - Funciones</title>
+</head>
+
+<body>
+  <h1>29 - JS - Ejercicios en clase - Funciones</h1>
+  
+  <h3>Número Mayor en array</h3>
+
+
+  <input type="text" id="n1" placeholder="Ingresa el primer número" autocomplete="off" required><br>
+  <input type="text" id="n2" placeholder="Ingresa el segundo número" required autocomplete="off"><br>
+  <input type="text" id="n3" placeholder="Ingresa el tercer número" required autocomplete="off"><br>
+  <input type="text" id="n4" placeholder="Ingresa el cuarto número" required autocomplete="off"><br>
+
+
+  <button onclick='maxBetween3numbers()'>Find Max</button>
+
+
+
+  <p id="arr"></p>
+  <p id="max"></p>
+
+
+
+  <script>
+
+    function maxBetween3numbers() {
+      let n1 = parseInt(document.getElementById("n1").value)
+      let n2 = parseInt(document.getElementById("n2").value)
+      let n3 = parseInt(document.getElementById("n3").value)
+      let n4 = parseInt(document.getElementById("n4").value)
+
+      let arr = [n1, n2, n3, n4]
+      console.log(arr)
+
+
+      let maxNumber = Math.max(...arr)
+      console.log(Math.max(...arr))
+
+      document.getElementById("arr").innerHTML = `[${arr}]`
+      document.getElementById("max").innerHTML = `${maxNumber} es el número mayor del array`
+
+      alert(`${maxNumber} es el número mayor del array`)
+    }
+
+  </script>
+
+
+</body>
+
+</html>

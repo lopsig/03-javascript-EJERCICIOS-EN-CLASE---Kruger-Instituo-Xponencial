@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-En Clase 32 - Funciones</title>
+</head>
+
+<body>
+  <h1>32 - JS - Ejercicios en clase - Funciones</h1>
+  <h3>Número existe en array?</h3>
+
+
+  <h4>Números del array</h4>
+  <input type="text" id="n1" placeholder="Ingresa el primer número" autocomplete="off" required><br>
+  <input type="text" id="n2" placeholder="Ingresa el segundo número" required autocomplete="off"><br>
+  <input type="text" id="n3" placeholder="Ingresa el tercer número" required autocomplete="off"><br>
+  <input type="text" id="n4" placeholder="Ingresa el cuarto número" required autocomplete="off"><br>
+
+  <h4>Número a evaluar</h4>  
+  <input type="text" id="n5" placeholder="Ingresa el número a evaluar" required autocomplete="off"><br><br>
+
+  <button onclick='numberInArray()'>Click me</button>
+
+
+
+  <p id="arr"></p>
+  <p id="result"></p>
+
+
+
+  <script>
+
+    function numberInArray() {
+      let n1 = parseInt(document.getElementById("n1").value)
+      let n2 = parseInt(document.getElementById("n2").value)
+      let n3 = parseInt(document.getElementById("n3").value)
+      let n4 = parseInt(document.getElementById("n4").value)
+      
+      let n5 = parseInt(document.getElementById("n5").value)
+
+      let arr = [n1, n2, n3, n4]
+      console.log(arr)
+
+
+      let result = arr.includes(n5);
+      console.log(result)
+
+      if (result === true) {
+        document.getElementById("result").innerHTML = `[${result}]`
+        alert(result)
+      }else{
+        document.getElementById("result").innerHTML = false
+      }
+
+
+
+      document.getElementById("arr").innerHTML = `[${arr}]`
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
